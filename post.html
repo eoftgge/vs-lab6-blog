@@ -3,36 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заголовок статьи | DevBlog</title>
+    <title>Заголовок статьи | Blog FIIT</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <a href="index.html" style="color: white; text-decoration: none;">← На главную</a>
+    <header class="site-header sticky">
+        <div class="container header-content">
+            <div class="logo">Blog FIIT</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="post.html" class="active">Статьи</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <article class="post-full">
-            <h1 class="post-title">Полный заголовок статьи</h1>
-            <div class="post-meta">Опубликовано: 26.12.2025</div>
+<main class="container post-container">
+        <article class="blog-post">
             
+            <header class="post-header">
+                <h1>PostgreSQL: Король реляционных баз данных</h1>
+                <div class="post-meta">
+                    <span>Автор: Егор Гаврильев и Сандал Хомподоев</span> | <time>26.12.2025</time>
+                </div>
+            </header>
+
+            <figure class="post-image">
+                <img src="https://placehold.co/800x400/336791/fff?text=PostgreSQL+Database" alt="PostgreSQL Logo">
+                <figcaption>Самая продвинутая Open Source база данных в мире</figcaption>
+            </figure>
+
             <div class="post-content">
-                <p>Это шаблон страницы для полного текста статьи. Здесь будет располагаться основной контент.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="lead">Если вы ищете надежную, мощную и бесплатную систему управления базами данных, то ваш выбор — PostgreSQL.</p>
+
+                <h2>Что такое PostgreSQL?</h2>
+                <p>Это объектно-реляционная СУБД (ORDBMS). Она славится своей устойчивостью, поддержкой сложных запросов и соответствием стандартам SQL.</p>
+
                 <blockquote>
-                    >> Цитаты мудрых оформляются вот так. Это добавляет тексту разнообразия.
+                    "Данные — это новая нефть, а PostgreSQL — лучший нефтеперерабатывающий завод для них."
                 </blockquote>
-                <p>Конец статьи.</p>
+
+                <h3>Ключевые преимущества</h3>
+                <p>В отличие от MySQL, Postgres лучше справляется со сложными аналитическими запросами и имеет поддержку JSON "из коробки".</p>
+                
+                <ul>
+                    <li><strong>ACID:</strong> Гарантия сохранности транзакций.</li>
+                    <li><strong>JSONB:</strong> Возможность работать как с NoSQL.</li>
+                    <li><strong>Расширяемость:</strong> Поддержка PostGIS для геоданных.</li>
+                </ul>
+
+                <h3>Мой опыт</h3>
+                <p>В лабораторной работе я использовал простые <code>SELECT</code> и <code>JOIN</code> запросы, чтобы понять, как связываются таблицы.</p>
             </div>
+
         </article>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2025 DevBlog</p>
+            <div class="social-links">
+                <a href="#">Telegram</a>
+                <a href="#">GitHub</a>
+                <a href="#">VK</a>
+            </div>
+            <p>
+                &copy; <span id="current-year-post">2025</span> Блог ФИИТ.
+            </p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year-post').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
