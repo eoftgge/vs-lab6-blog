@@ -21,7 +21,7 @@
         </div>
     </header>
 
-<main class="container post-container">
+    <main class="container post-container">
         <article class="blog-post">
             
             <header class="post-header">
@@ -60,6 +60,35 @@
             </div>
 
         </article>
+        <section class="comments-section">
+            <h3>Комментарии (2)</h3>
+            
+            <div class="comments-list">
+                <div class="comment-item">
+                    <strong>Баайагантай Сандаар:</strong>
+                    <p>Отличная статья! PostgreSQL действительно мощная вещь.</p>
+                </div>
+                <div class="comment-item">
+                    <strong>Ахолупке Севану.:</strong>
+                    <p>А как насчет производительности по сравнению с MySQL?</p>
+                </div>
+            </div>
+
+            <form id="comment-form" class="comment-form">
+                <h4>Оставить комментарий</h4>
+                
+                <div class="form-group">
+                    <label for="username">Имя:</label>
+                    <input type="text" id="username" placeholder="Ваше имя" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment-text">Сообщение:</label>
+                    <textarea id="comment-text" rows="3" placeholder="Напишите что-нибудь..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Отправить</button>
+            </form>
     </main>
 
     <footer class="site-footer">
@@ -78,5 +107,6 @@
     <script>
         document.getElementById('current-year-post').textContent = new Date().getFullYear();
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
