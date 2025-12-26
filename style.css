@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto; 
+    max-width: 800px;
+}
+
+.site-header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.site-header h1 {
+    margin: 0;
+}
+
+.post-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+}
