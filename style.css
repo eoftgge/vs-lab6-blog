@@ -217,3 +217,35 @@ code {
 .btn-submit:hover {
     background-color: #2980b9;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-list {
+        margin-top: 15px;
+        flex-direction: column; 
+        gap: 10px;
+    }
+    .container {
+        width: 95%; 
+        padding: 0 10px; 
+    }
+    .post-header h1 {
+        font-size: 1.8rem; 
+    }
+    .post-card {
+        margin-bottom: 15px; 
+        padding: 15px; 
+    }
+    .lead {
+        font-size: 1rem;
+    }
+}
