@@ -3,35 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | FIIT</title>
     <title>Мой Блог | Начало</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>Blog FIIT</h1>
+    <header class="site-header sticky">
+        <div class="container header-content">
+            <div class="logo">Blog FIIT</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="post.html">Статьи</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="home-page">
-            <h2>Последние записи</h2>
-            <div id="post-grid">
-                <article>
-                    <h3>Мой первый пост</h3>
-                    <p>Это описание первого поста, созданное в рамках первой задачи.</p>
-                    <button>Читать далее</button>
-                </article>
-                <article>
-                    <h3>Git: это непросто</h3>
-                    <p>В этом посте я расскажу, как делать коммиты пошагово.</p>
-                    <button>Читать далее</button>
-                </article>
+    <main class="container">
+        <section class="posts-list" id="home-page">
+            <h2 style="margin-top: 40px;">Последние записи</h2>
+
+            <article class="post-card">
+                <h3>Начало работы с Git</h3>
+                <div class="post-meta">Дата: 26.12.2025</div>
+                <p>В этом посте я описываю, как инициализировать репозиторий и сделать первый коммит.</p>
+                <a href="post.html" class="read-more">Читать далее →</a>
+            </article>
+
+            <article class="post-card">
+                <h3>Структура HTML документа</h3>
+                <div class="post-meta">Дата: 25.12.2025</div>
+                <p>Почему важно использовать семантические теги и как правильно подключить стили.</p>
+                <a href="post.html" class="read-more">Читать далее →</a>
+            </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Мой Блог</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#">Telegram</a>
+                <a href="#">GitHub</a>
+                <a href="#">VK</a>
+            </div>
+            <p>
+                &copy; <span id="current-year">2025</span> ФИИТ Блог. Все права защищены.
+            </p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
